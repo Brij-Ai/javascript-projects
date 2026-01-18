@@ -7,6 +7,7 @@ A collection of beginner-friendly JavaScript projects focused on core concepts l
 - Guess My Number
 - Modal Window
 - Pig Game
+- Behind-the-Scenes-concepts
 
 ## Tech Stack
 
