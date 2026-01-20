@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 // function greet() {
 //   //function scope
@@ -87,3 +87,25 @@
 // console.log(z === window.z); // false
 
 // starting This keyword practice
+console.log(this);
+function calAge(birthYear) {
+  const age = 2026 - birthYear;
+  console.log(this);
+}
+calAge(2001);
+
+const br = {
+  birthYear: 2008,
+  calAge: function () {
+    console.log(2026 - this.birthYear);
+  },
+};
+
+br.calAge();
+
+const sonu = {
+  birthYear: 2004,
+};
+
+sonu.calAge = br.calAge;
+sonu.calAge();
