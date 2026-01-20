@@ -87,25 +87,42 @@
 // console.log(z === window.z); // false
 
 // starting This keyword practice
-console.log(this);
-function calAge(birthYear) {
-  const age = 2026 - birthYear;
-  console.log(this);
-}
-calAge(2001);
+// console.log(this);
+// function calAge(birthYear) {
+//   const age = 2026 - birthYear;
+//   console.log(this);
+// }
+// calAge(2001);
 
-const br = {
-  birthYear: 2008,
-  calAge: function () {
-    console.log(2026 - this.birthYear);
-  },
+// const br = {
+//   firstName: 'brij',
+//   birthYear: 2008,
+//   self: this,
+//   calAge: function () {
+//     console.log(2026 - this.birthYear);
+//   },
+//   greet: () => console.log(`hey ,${firstName}`), // fisrst name is not defined in global scope bz this arrow fn need global
+// };
+// const firstName = 'brij';// when this difined then greet is working
+// br.calAge();
+// br.greet();
+
+// const sonu = {
+//   birthYear: 2004,
+// };
+
+// sonu.calAge = br.calAge;
+// sonu.calAge();
+// Arguments keywords
+// arguments = [] like this and exist for only regular function
+const addExr = function (a, b) {
+  console.log(arguments);
+  return a + b;
 };
-
-br.calAge();
-
-const sonu = {
-  birthYear: 2004,
+// does not have any arguments list in arrow function
+const addExr02 = (a, b) => {
+  console.log(arguments);
+  a + b;
 };
-
-sonu.calAge = br.calAge;
-sonu.calAge();
+addExr(8, 4);
+addExr02(3, 4);
