@@ -129,18 +129,18 @@
 
 // Object refrences in practice (Deep copy Vs Shallow copy)
 
-const pankaj = {
-  firstName: 'Pankaj',
-  lastName: 'Shah',
-  age: 23,
-};
+// const pankaj = {
+//   firstName: 'Pankaj',
+//   lastName: 'Shah',
+//   age: 23,
+// };
 
 // console.log(pankaj);
-const marreidPankaj = pankaj; // changes every where bcz refrences is there
+// const marreidPankaj = pankaj; // changes every where bcz refrences is there
 // refrences created
-marreidPankaj.lastName = 'shahu'; // both changes last name
+// marreidPankaj.lastName = 'shahu'; // both changes last name
 // console.log(pankaj);
-console.log('Before : ', pankaj);
-console.log('After : ', marreidPankaj);
+// console.log('Before : ', pankaj);
+// console.log('After : ', marreidPankaj);
 // not possible if try
 // pankaj = { add: 'new loc' }; // not possiable
