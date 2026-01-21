@@ -32,6 +32,12 @@ const restaurant = {
   order: function (startIdx, mainIdx) {
     return [this.starterMenu[startIdx], this.mainMenu[mainIdx]];
   },
+
+  orderDelivery: function (obj) {
+    console.log(
+      `Order recieved !,place at ${obj.location},cost is ${obj.cost},you ordered ${this.starterMenu[obj.foodeIdx]}`,
+    );
+  },
   openingHours: {
     thu: {
       open: 12,
@@ -48,35 +54,61 @@ const restaurant = {
   },
 };
 
+restaurant.orderDelivery({
+  time: '08:22',
+  location: 'NIT Agartal',
+  foodeIdx: 2,
+  cost: 432,
+});
 // 01. Destructring Array
 
-const arr = [3, 4, 5];
-const a = arr[0];
-const b = arr[1];
-const c = arr[3];
+// const arr = [3, 4, 5];
+// const a = arr[0];
+// const b = arr[1];
+// const c = arr[3];
 // destructring assighnment
-const [x, y, z] = arr;
-console.log(x, y, z);
-console.log(arr);
+// const [x, y, z] = arr;
+// console.log(x, y, z);
+// console.log(arr);
 
 // destructring categories array
 // const [first, second] = restaurant.categories;
-let [first, , third] = restaurant.categories;
-console.log(first, third);
+// let [first, , third] = restaurant.categories;
+// console.log(first, third);
 // switching variables
 // 1 by swapping
 // 2 by another (shortcut)
-[third, first] = [first, third];
-console.log(first, third);
+// [third, first] = [first, third];
+// console.log(first, third);
 
-let [starterOrder, mainOrder] = restaurant.order(3, 0);
-console.log(starterOrder, mainOrder);
+// let [starterOrder, mainOrder] = restaurant.order(3, 0);
+// console.log(starterOrder, mainOrder);
 // Nested destructring
-const nestedArr = [1, 2, [3, 4]];
-const [i, , [j, k]] = nestedArr;
-console.log(i, j, k);
+// const nestedArr = [1, 2, [3, 4]];
+// const [i, , [j, k]] = nestedArr;
+// console.log(i, j, k);
 
 // Default values
-const arr1 = [4, 3];
-const [P = 1, q = 1, r = 1] = arr;
-console.log(P, q, r);
+// const arr1 = [4, 3];
+// const [P = 1, q = 1, r = 1] = arr;
+// console.log(P, q, r);
+
+// 2.Destructring Object
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
+// default values
+const { menu = [], starterMenu: MenuS = [] } = restaurant;
+console.log(menu, MenuS);
+
+//Destructring nested object
+
+const {
+  fri: { open, close },
+} = openingHours;
+console.log(open, close);
