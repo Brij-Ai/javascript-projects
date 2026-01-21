@@ -29,7 +29,9 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-
+  order: function (startIdx, mainIdx) {
+    return [this.starterMenu[startIdx], this.mainMenu[mainIdx]];
+  },
   openingHours: {
     thu: {
       open: 12,
@@ -47,3 +49,34 @@ const restaurant = {
 };
 
 // 01. Destructring Array
+
+const arr = [3, 4, 5];
+const a = arr[0];
+const b = arr[1];
+const c = arr[3];
+// destructring assighnment
+const [x, y, z] = arr;
+console.log(x, y, z);
+console.log(arr);
+
+// destructring categories array
+// const [first, second] = restaurant.categories;
+let [first, , third] = restaurant.categories;
+console.log(first, third);
+// switching variables
+// 1 by swapping
+// 2 by another (shortcut)
+[third, first] = [first, third];
+console.log(first, third);
+
+let [starterOrder, mainOrder] = restaurant.order(3, 0);
+console.log(starterOrder, mainOrder);
+// Nested destructring
+const nestedArr = [1, 2, [3, 4]];
+const [i, , [j, k]] = nestedArr;
+console.log(i, j, k);
+
+// Default values
+const arr1 = [4, 3];
+const [P = 1, q = 1, r = 1] = arr;
+console.log(P, q, r);
