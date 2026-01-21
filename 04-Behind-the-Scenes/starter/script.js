@@ -115,14 +115,32 @@
 // sonu.calAge();
 // Arguments keywords
 // arguments = [] like this and exist for only regular function
-const addExr = function (a, b) {
-  console.log(arguments);
-  return a + b;
-};
+// const addExr = function (a, b) {
+//   console.log(arguments);
+//   return a + b;
+// };
 // does not have any arguments list in arrow function
-const addExr02 = (a, b) => {
-  console.log(arguments);
-  a + b;
+// const addExr02 = (a, b) => {
+//   console.log(arguments);
+//   a + b;
+// };
+// addExr(8, 4);
+// addExr02(3, 4);
+
+// Object refrences in practice (Deep copy Vs Shallow copy)
+
+const pankaj = {
+  firstName: 'Pankaj',
+  lastName: 'Shah',
+  age: 23,
 };
-addExr(8, 4);
-addExr02(3, 4);
+
+// console.log(pankaj);
+const marreidPankaj = pankaj; // changes every where bcz refrences is there
+// refrences created
+marreidPankaj.lastName = 'shahu'; // both changes last name
+// console.log(pankaj);
+console.log('Before : ', pankaj);
+console.log('After : ', marreidPankaj);
+// not possible if try
+// pankaj = { add: 'new loc' }; // not possiable
