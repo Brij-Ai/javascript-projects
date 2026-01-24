@@ -114,3 +114,15 @@ restaurant.orderDelivery({
 // console.log(open, close);
 
 // The Spread Operator
+const num = [5, 6, 7];
+const newNum = [1, 2, 3, 4, num[0], num[1], num[2]];
+//spreading num array
+const newNum2 = [1, 2, 3, 4, ...num];
+console.log(newNum);
+console.log(newNum2);
+console.log(...newNum2);
+
+const name = 'Brij';
+// const newName = [...name, 'k'];
+
+console.log(newName);
