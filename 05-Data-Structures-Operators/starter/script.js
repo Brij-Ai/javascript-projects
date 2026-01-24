@@ -94,21 +94,23 @@ restaurant.orderDelivery({
 // console.log(P, q, r);
 
 // 2.Destructring Object
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
-console.log(restaurantName, hours, tags);
-// default values
-const { menu = [], starterMenu: MenuS = [] } = restaurant;
-console.log(menu, MenuS);
+// const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+// console.log(restaurantName, hours, tags);
+// // default values
+// const { menu = [], starterMenu: MenuS = [] } = restaurant;
+// console.log(menu, MenuS);
 
 //Destructring nested object
 
-const {
-  fri: { open, close },
-} = openingHours;
-console.log(open, close);
+// const {
+//   fri: { open, close },
+// } = openingHours;
+// console.log(open, close);
+
+// The Spread Operator
