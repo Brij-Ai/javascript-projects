@@ -126,3 +126,5 @@ const name = 'Brij';
 // const newName = [...name, 'k'];
 
 console.log(newName);
+
+//Continue after some time
