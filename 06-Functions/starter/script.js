@@ -56,20 +56,47 @@ const toUpperFirstWord = function (str) {
 };
 
 // High order function
-const transform = function (str, fn) {
-  console.log(`Original string : ${str}`);
-  console.log(`Transformed string : ${fn(str)}`);
-  console.log(`Transformed by : ${fn.name}`);
+// const transform = function (str, fn) {
+//   console.log(`Original string : ${str}`);
+//   console.log(`Transformed string : ${fn(str)}`);
+//   console.log(`Transformed by : ${fn.name}`);
+// };
+
+// transform('What is the going on !', toUpperFirstWord);
+// transform('What is the going on !', oneWord);
+
+// // function
+// const highFive = function () {
+//   console.log('👋👋');
+// };
+
+// document.body.addEventListener('click', highFive);
+
+// ['Sunny', 'Nirmal'].forEach(highFive);
+
+// Finished high order function
+
+// Function Returnig function
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting},${name}`);
+  };
+};
+greet('Hello', 'Brij');
+// greet('Hey'); // No output
+const greeter = greet('hey');
+greeter('Brij'); // Now gets some output
+
+// Another way for calling returning function
+
+greet('Hello')('Neoo'); //(for first function) (Second function)
+// Working like level by level
+
+// Challenge
+// Substution of above function
+const greetArr = greeting => name => {
+  console.log(`${greeting},${name}`);
 };
 
-transform('What is the going on !', toUpperFirstWord);
-transform('What is the going on !', oneWord);
-
-// function
-const highFive = function () {
-  console.log('👋👋');
-};
-
-document.body.addEventListener('click', highFive);
-
-['Sunny', 'Nirmal'].forEach(highFive);
+greetArr('Hii')('Brij..');
