@@ -45,15 +45,15 @@
 
 //Starting high order function and first class function
 
-const oneWord = function (str) {
-  return str.replace(/ /g, '').toLowerCase();
-};
+// const oneWord = function (str) {
+//   return str.replace(/ /g, '').toLowerCase();
+// };
 // console.log(oneWord('hello you not ready for this !'));
 
-const toUpperFirstWord = function (str) {
-  const [first, ...others] = str.split(' ');
-  return [first.toUpperCase(), ...others].join();
-};
+// const toUpperFirstWord = function (str) {
+//   const [first, ...others] = str.split(' ');
+//   return [first.toUpperCase(), ...others].join();
+// };
 
 // High order function
 // const transform = function (str, fn) {
@@ -78,25 +78,27 @@ const toUpperFirstWord = function (str) {
 
 // Function Returnig function
 
-const greet = function (greeting) {
-  return function (name) {
-    console.log(`${greeting},${name}`);
-  };
-};
-greet('Hello', 'Brij');
-// greet('Hey'); // No output
-const greeter = greet('hey');
-greeter('Brij'); // Now gets some output
+// const greet = function (greeting) {
+//   return function (name) {
+//     console.log(`${greeting},${name}`);
+//   };
+// };
+// greet('Hello', 'Brij');
+// // greet('Hey'); // No output
+// const greeter = greet('hey');
+// greeter('Brij'); // Now gets some output
 
-// Another way for calling returning function
+// // Another way for calling returning function
 
-greet('Hello')('Neoo'); //(for first function) (Second function)
-// Working like level by level
+// greet('Hello')('Neoo'); //(for first function) (Second function)
+// // Working like level by level
 
-// Challenge
-// Substution of above function
-const greetArr = greeting => name => {
-  console.log(`${greeting},${name}`);
-};
+// // Challenge
+// // Substution of above function
+// const greetArr = greeting => name => {
+//   console.log(`${greeting},${name}`);
+// };
 
-greetArr('Hii')('Brij..');
+// greetArr('Hii')('Brij..');
+
+// Bind Method
