@@ -76,3 +76,42 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 /////////////////////////////////////////////////
 
 // Started learning Java script from now date : 27-10-2026
+
+let arr = ['a','b', 'c', 'd', 'e'];
+
+
+// SLICING 
+console.log(arr.slice(0));
+console.log(arr.slice(1,-1));
+console.log(arr.slice(3));
+console.log(arr.slice(-3,))
+
+
+// SPLICE
+// Removes all element with given range
+
+// console.log(arr.splice(1))
+console.log(arr.splice(1,2)) // first parameter for start position, second count of delete elements
+// Muted array after splice method called
+console.log(arr)
+
+
+// REVERSE (Mutating method)
+arr = ['a','b', 'c', 'd', 'e'];
+
+// console.log(arr.reverse()) 
+// console.log(arr) 
+let arr2 = ['m','n','0','p','q']
+
+console.log(arr2.reverse())
+console.log(arr2)
+
+// CONCAT
+console.log(arr.concat(arr2))
+
+// JOIN
+// console.log(arr.join(','))
+let string = arr.join(',')
+console.log(string)
+string = arr.join('-')
+console.log(string)
