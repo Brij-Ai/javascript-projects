@@ -11,12 +11,21 @@
 // For each loop in array
 let positives = [-1,-3,-65,34,23,32,-3]
 
+// for(const positive of posotives){
+//     if (positive >= 0){
+//         console.log(`Positive : ${positive}`)
+//     }else{
+//         console.log(`Negative : ${positive}`)
+//     }
+// }
 
-for(const positive of posotives){
-    if (positive >= 0){
+// ForEach method in array
+// Insetead using for each loop use forEach method for array
+positives.forEach(function(positive) {
+    if(positive >= 0){
         console.log(`Positive : ${positive}`)
     }else{
         console.log(`Negative : ${positive}`)
     }
-}
+} )
 
