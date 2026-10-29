@@ -8,6 +8,8 @@
 // console.log(arr.at(-1))
 
 
+// {Start}..............
+// ........
 // For each loop in array
 let positives = [-1,-3,-65,34,23,32,-3]
 
@@ -19,13 +21,28 @@ let positives = [-1,-3,-65,34,23,32,-3]
 //     }
 // }
 
+///////////////.........
+
 // ForEach method in array
 // Insetead using for each loop use forEach method for array
-positives.forEach(function(positive) {
-    if(positive >= 0){
-        console.log(`Positive : ${positive}`)
-    }else{
-        console.log(`Negative : ${positive}`)
-    }
-} )
+// positives.forEach(function(positive) {
+//     if(positive >= 0){
+//         console.log(`Positive : ${positive}`)
+//     }else{
+//         console.log(`Negative : ${positive}`)
+//     }
+// } )
 
+// .............
+// Better practice
+// const val = function(positive){
+//     if(positive >= 0){
+//         console.log(`Positive : ${positive}`)
+//     }else{
+//         console.log(`Negative : ${positive}`)
+//     }
+// }
+
+// positives.forEach(val())
+
+// {END}...........
